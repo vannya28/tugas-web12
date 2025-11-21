@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Beranda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="profile.html">Profil</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="new-post-section">
+            <h2>Buat Postingan Baru</h2>
+            <form id="new-post-form">
+                <input type="text" id="post-title" placeholder="Judul Postingan" required>
+                <textarea id="post-content" placeholder="Isi Postingan Anda..." required></textarea>
+                <button type="submit">Unggah Postingan</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="posts-container">
+            <h2>Postingan Terbaru</h2>
+            <article class="blog-post">
+                <h3>Postingan Pertama!</h3>
+                <p class="post-meta">Diposting oleh **Admin** pada 21 Nov 2025</p>
+                <p>Selamat datang di Blog! Ini adalah contoh postingan blog. Anda bisa menambahkan komentar di bawah.</p>
+
+                <div class="comments-section">
+                    <h4>Komentar (1)</h4>
+                    <div class="comment">
+                        <p><strong>Pengunjung:</strong> Wah, keren sekali!</p>
+                    </div>
+                    <form class="comment-form">
+                        <textarea placeholder="Tulis komentar Anda..." required></textarea>
+                        <button type="submit">Kirim Komentar</button>
+                    </form>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Blog</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

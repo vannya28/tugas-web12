@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Daftar Akun Baru</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <h1>Blog 📝</h1>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="profile.html">Profil</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="register-form-container">
+            <h2>Daftar Akun Baru</h2>
+            <form id="register-form">
+                <label for="reg-username">Nama Pengguna:</label>
+                <input type="text" id="reg-username" name="username" required>
+
+                <label for="reg-email">Email:</label>
+                <input type="email" id="reg-email" name="email" required>
+
+                <label for="reg-password">Password:</label>
+                <input type="password" id="reg-password" name="password" required>
+                
+                <label for="reg-confirm-password">Konfirmasi Password:</label>
+                <input type="password" id="reg-confirm-password" name="confirm-password" required>
+
+                <button type="submit">Daftar</button>
+            </form>
+            <p>Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Blog</p>
+    </footer>
+    <script src="script.js"></script> 
+</body>
+</html>
