@@ -1,4 +1,3 @@
-/* Styling Dasar */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -41,7 +40,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Styling Postingan */
 .blog-post {
     border: 1px solid #ddd;
     padding: 15px;
@@ -56,7 +54,6 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Styling Formulir */
 #new-post-form input[type="text"],
 #new-post-form textarea,
 #login-form input {
@@ -64,7 +61,7 @@ footer {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    box-sizing: border-box; /* Agar padding tidak menambah lebar */
+    box-sizing: border-box;
 }
 
 #new-post-form button,
@@ -79,7 +76,6 @@ footer {
     margin-top: 5px;
 }
 
-/* Styling Komentar */
 .comments-section {
     margin-top: 20px;
     padding: 10px;
@@ -101,7 +97,6 @@ footer {
     box-sizing: border-box;
 }
 
-/* Styling Profil */
 #user-profile {
     text-align: center;
 }
@@ -113,4 +108,5 @@ footer {
     margin-bottom: 15px;
     object-fit: cover;
     border: 5px solid #0077b6;
+
 }
