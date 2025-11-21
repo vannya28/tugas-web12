@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #0077b6; /* Warna biru khas */
+    background-color: #82d3ff;
     color: white;
     padding: 1em 0;
     text-align: center;
@@ -35,7 +35,7 @@ header nav a {
 footer {
     text-align: center;
     padding: 1em 0;
-    background-color: #333;
+    background-color: #00a6ff;
     color: white;
     margin-top: 20px;
 }
@@ -67,7 +67,7 @@ footer {
 #new-post-form button,
 #login-form button,
 .comment-form button {
-    background-color: #0077b6;
+    background-color: #a1deff;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -107,6 +107,6 @@ footer {
     border-radius: 50%;
     margin-bottom: 15px;
     object-fit: cover;
-    border: 5px solid #0077b6;
+    border: 5px solid #82d3ff;
 
 }
