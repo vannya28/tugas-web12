@@ -2,13 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const postsContainer = document.getElementById('posts-container');
     const newPostForm = document.getElementById('new-post-form');
     const loginForm = document.getElementById('login-form');
-
-    // --- Data Postingan Sederhana (Menggunakan Local Storage) ---
     let posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
 
-    // Fungsi untuk menampilkan postingan
     const renderPosts = () => {
-        // Hapus postingan contoh yang ada di HTML, sisakan judul
         postsContainer.innerHTML = '<h2>Postingan Terbaru</h2>'; 
 
         if (posts.length === 0) {
@@ -42,11 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
             postsContainer.appendChild(postElement);
         });
 
-        // Setelah postingan di-render, pasang event listener untuk formulir komentar
         attachCommentListeners();
     };
 
-    // --- Fitur Membuat Postingan Baru ---
     if (newPostForm) {
         newPostForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -58,40 +52,32 @@ document.addEventListener('DOMContentLoaded', () => {
             const newPost = {
                 title: title,
                 content: content,
-                author: 'Pengguna Saat Ini', // Ganti dengan nama pengguna jika sudah login
+                author: 'Pengguna Saat Ini', 
                 date: dateString,
                 comments: []
             };
 
-            posts.unshift(newPost); // Tambahkan di awal array
+            posts.unshift(newPost); 
             localStorage.setItem('blogPosts', JSON.stringify(posts));
             
-            // Bersihkan formulir
             this.reset();
             renderPosts();
             alert('Postingan berhasil diunggah!');
         });
 
-        // Tampilkan postingan saat halaman dimuat
         renderPosts(); 
     }
-
-    // --- Fitur Login Sederhana (Hanya Alert) ---
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const username = document.getElementById('username').value;
-            // Dalam proyek nyata, Anda akan mengirim ini ke server
             alert(`Selamat datang, ${username}! Anda berhasil Login!`);
-            // Redireksi ke halaman utama setelah login
             window.location.href = 'index.html'; 
         });
     }
 
-    // --- Fitur Komentar Interaktif ---
     function attachCommentListeners() {
         document.querySelectorAll('.comment-form').forEach(form => {
-            // Hapus listener lama untuk menghindari duplikasi
             form.removeEventListener('submit', handleCommentSubmit); 
             form.addEventListener('submit', handleCommentSubmit);
         });
@@ -106,18 +92,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (commentText.trim() === "") return;
 
         const newComment = {
-            author: 'Pengunjung', // Ganti dengan nama pengguna sebenarnya
+            author: 'Pengunjung', 
             text: commentText
         };
 
-        // Tambahkan komentar ke data
         posts[postIndex].comments.push(newComment);
         localStorage.setItem('blogPosts', JSON.stringify(posts));
 
-        // Bersihkan textarea
         textarea.value = '';
 
-        // Render ulang postingan (atau hanya bagian komentar, untuk efisiensi)
         renderPosts(); 
     }
+
 });
